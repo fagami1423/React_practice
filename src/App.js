@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       My first Compoenent
-      <Heading/>
+      <Heading firstname="Raj"/>
     </div>
   );
 }
