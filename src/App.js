@@ -14,6 +14,7 @@ function App() {
     <div className="App">
       My first Compoenent
       <Heading firstname="Raj"/>
+      <Heading firstname="Hari"/>
     </div>
   );
 }
