@@ -1,20 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-import Heading from "./Heading";
-
-//infile component
-// function Heading() {
-//   return (
-//     <h1>This is an heading 1</h1>
-//   )
-// }
+import "./App.css";
+import Card from  "./components/Card.js";
 
 function App() {
   return (
-    <div className="App">
-      My first Compoenent
-      <Heading firstname="Raj"/>
-      <Heading firstname="Hari"/>
+    <div>
+      <h1>Task: Add three Card elements</h1>
+      <Card h2="First Card's h2" h3="First card's h3" />
+      <Card h2="Second Card's h2"  h3="Second card's h3"/>
+      <Card h2="Third Card's h2"  h3="Third card's h3"/>
     </div>
   );
 }
