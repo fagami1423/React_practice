@@ -1,3 +1,5 @@
+//you will be changing the states of the data here
+
 function handleClick() { 
   let randomNum = Math.floor(Math.random() * 3) + 1;
   console.log(randomNum);
