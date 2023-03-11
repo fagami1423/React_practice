@@ -1,21 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Heading from "./Heading";
+import { people } from './components/Data.js';
+import { getImageUrl } from './components/utils.js';
 
-//infile component
-// function Heading() {
-//   return (
-//     <h1>This is an heading 1</h1>
-//   )
-// }
-
-function App() {
-  return (
-    <div className="App">
-      My first Compoenent
-      <Heading firstname="Raj"/>
-    </div>
+export default function List() {
+  const listItems = people.map(person =>
+    <li key={person.id}>
+      <img
+        src={getImageUrl(person)}
+        alt={person.name}
+      />
+      <p>
+        <b>{person.name}</b>
+          {' ' + person.profession + ' '}
+          known for {person.accomplishment}
+      </p>
+    </li>
   );
+  return <ul>{listItems}</ul>;
 }
-
-export default App;
