@@ -1,22 +1,19 @@
-//you will be changing the states of the data here
-import React from "react";
-import FruitsCounter from "./components/FruitsCounter";
-import Fruits from "./components/Fruits";
+import { people } from './components/Data.js';
+import { getImageUrl } from './components/utils.js';
 
-function App() {
-  const [fruits] = React.useState([
-    {fruitName: 'apple', id: 1},
-    {fruitName: 'apple', id: 2},
-    {fruitName: 'plum', id: 3},
-  ]);
-
-  return (
-    <div>
-      <h1>Fruits Counter</h1>
-      <Fruits fruits={fruits} />
-      <FruitsCounter fruits={fruits} />
-    </div>
+export default function List() {
+  const listItems = people.map(person =>
+    <li key={person.id}>
+      <img
+        src={getImageUrl(person)}
+        alt={person.name}
+      />
+      <p>
+        <b>{person.name}</b>
+          {' ' + person.profession + ' '}
+          known for {person.accomplishment}
+      </p>
+    </li>
   );
-  }
-
-export default App;
+  return <ul>{listItems}</ul>;
+}
